@@ -26,6 +26,7 @@
     <!-- <div class="main-bg">
       <img src="images/background.jpg" alt="background">
     </div> -->
+    <!--
     <div class="pop">
       <a href="javascript:;" class="pop-close" id="popClose"><i class="xi-close"></i></a>
       <div class="pop-txt">
@@ -34,6 +35,7 @@
         <p>비영리 목적의 웹사이트입니다.</p>
       </div>
     </div>
+    -->
     <div class="container">
       <div class="main-txt">
         <h1>Portfolio</h1>
@@ -44,7 +46,7 @@
   <section id="intro">
     <div class="container">
       <h2>Intro</h2>
-      <div class="swiper-container">
+      <div class="intro-slider swiper-container">
         <div class="swiper-wrapper">
           <div class="intro-cont swiper-slide">
             <div class="cont-img"></div>
@@ -69,8 +71,8 @@
           </div>
         </div>
         <!-- Add Arrows -->
-      <div class="swiper-button-next slide-btn"></div>
-      <div class="swiper-button-prev slide-btn"></div>
+      <div class="slide-btn swiper-button-next"></div>
+      <div class="slide-btn swiper-button-prev"></div>
       </div>
     </div>
   </section>
@@ -119,11 +121,18 @@
             <p>웹디자이너/웹퍼블리셔로 취업</p>
             <p>직접 교육한 수강생 포트폴리오</p>
           </div>
-          <div class="cont-slide">
-            <div class="cont-slide-img"></div>
-            <div class="cont-slide-img"></div>
-            <div class="cont-slide-img"></div>
-            <div class="cont-slide-img"></div>
+          <div class="pofol-slider swiper-container">
+            <div class="cont-slide swiper-wrapper">
+              <div class="cont-slide-img swiper-slide"></div>
+              <div class="cont-slide-img swiper-slide"></div>
+              <div class="cont-slide-img swiper-slide"></div>
+              <div class="cont-slide-img swiper-slide"></div>
+              <div class="cont-slide-img swiper-slide"></div>
+              <div class="cont-slide-img swiper-slide"></div>
+              <div class="cont-slide-img swiper-slide"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="pofol-dot swiper-pagination"></div>
           </div>
         </div>
       </div>
@@ -158,12 +167,30 @@
   <script src="js/swiper.min.js"></script>
   <script src="js/script.js"></script>
   <script>
-    var swiper = new Swiper('.swiper-container', {
+    var introSwiper = new Swiper('.intro-slider', {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
     });
+
+    var pofolSwiper = new Swiper('.pofol-slider', {
+      slidesPerView: 2,
+      spaceBetween: 40,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3
+        },
+        1200: {
+          slidesPerView: 4
+        }
+      }
+    });
+    
   </script>
 </body>
 </html>
