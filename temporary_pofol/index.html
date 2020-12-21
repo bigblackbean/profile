@@ -123,13 +123,27 @@
           </div>
           <div class="pofol-slider swiper-container">
             <div class="cont-slide swiper-wrapper">
-              <div class="cont-slide-img swiper-slide"></div>
-              <div class="cont-slide-img swiper-slide"></div>
-              <div class="cont-slide-img swiper-slide"></div>
-              <div class="cont-slide-img swiper-slide"></div>
-              <div class="cont-slide-img swiper-slide"></div>
-              <div class="cont-slide-img swiper-slide"></div>
-              <div class="cont-slide-img swiper-slide"></div>
+              <div class="cont-slide-img swiper-slide">
+                <a href="http://guning.co.kr/" target="_blank"><img src="images/student-pofol-01.jpg" alt="강혜련포트폴리오"></a>
+              </div>
+              <div class="cont-slide-img swiper-slide">
+                <a href="http://guning.co.kr/" target="_blank"><img src="images/student-pofol-02.jpg" alt="최송이포트폴리오"></a>
+              </div>
+              <div class="cont-slide-img swiper-slide">
+                <a href="http://guning.co.kr/" target="_blank"><img src="images/student-pofol-03.jpg" alt="윤기쁨포트폴리오"></a>
+              </div>
+              <div class="cont-slide-img swiper-slide">
+                <a href="http://guning.co.kr/" target="_blank"><img src="images/student-pofol-04.jpg" alt="박주희포트폴리오"></a>
+              </div>
+              <div class="cont-slide-img swiper-slide">
+                <a href="http://guning.co.kr/" target="_blank"><img src="images/student-pofol-05.jpg" alt="유인용포트폴리"></a>
+              </div>
+              <div class="cont-slide-img swiper-slide">
+                <a href="http://guning.co.kr/" target="_blank"><img src="images/student-pofol-06.jpg" alt="서일포트폴리오"></a>
+              </div>
+              <div class="cont-slide-img swiper-slide">
+                <a href="" target="_blank"><img src="images/student-pofol-07.jpg" alt=""></a>
+              </div>
             </div>
             <!-- Add Pagination -->
             <div class="pofol-dot swiper-pagination"></div>
@@ -177,7 +191,7 @@
 
     var pofolSwiper = new Swiper('.pofol-slider', {
       slidesPerView: 2,
-      spaceBetween: 40,
+      spaceBetween: 20,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -187,7 +201,8 @@
           slidesPerView: 3
         },
         1200: {
-          slidesPerView: 4
+          slidesPerView: 4,
+          spaceBetween: 40,
         }
       }
     });
