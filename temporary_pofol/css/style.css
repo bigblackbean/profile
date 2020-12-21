@@ -22,7 +22,7 @@ h1 {
 }
 h2 {
   font-size: 3rem;
-  margin: 40px 0;
+  margin-bottom: 50px;
 }
 h3 {
   font-size: 2rem;
@@ -200,12 +200,13 @@ strong {
 }
 #pofol .pofol-wrap {}
 #pofol .pofol-wrap .pofol-cont {
-  margin: 200px 0;
+  /* margin: 200px 0; */
 }
 #pofol .pofol-wrap .pofol-cont.cd,
 #pofol .pofol-wrap .pofol-cont.sd {
   display: flex;
   align-items: center;
+  margin-bottom: 100px;
 }
 #pofol .pofol-wrap .pofol-cont .cont-img {
   width: 50%;
@@ -214,7 +215,7 @@ strong {
 }
 #pofol .pofol-wrap .pofol-cont .cont-txt {
   width: 50%;
-  padding: 50px;
+  padding-left: 50px;
 }
 #pofol .pofol-wrap .pofol-cont .cont-txt p {
   margin: 10px 0;
@@ -226,19 +227,6 @@ strong {
   width: 100%;
   padding: 0;
 }
-/* #pofol .pofol-wrap .pofol-cont.lc .cont-slide {
-  display: flex;
-  margin: 100px 0;
-}
-#pofol .pofol-wrap .pofol-cont.lc .cont-slide .cont-slide-img {
-  flex: 1 1 auto;
-  height: 200px;
-  background: #AAA;
-  margin-right: 30px;
-}
-#pofol .pofol-wrap .pofol-cont.lc .cont-slide .cont-slide-img:last-child {
-  margin-right: 0;
-} */
 #pofol .pofol-wrap .pofol-cont.lc .cont-slide {
   margin: 50px 0;
 }
@@ -293,6 +281,12 @@ strong {
   margin: 50px 0;
   color: #FFF;
 }
+#contact .contact-wrap .contact-cont:nth-child(3) p {
+  display: block;
+}
+#contact .contact-wrap .contact-cont p.drive {
+  display: none;
+}
 /* CONTACT */
 
 /* 1200px */
@@ -310,7 +304,7 @@ strong {
   html {
     font-size: 14px;
   }
-  
+
   /* ABOUT ME */
   #about {
     background: #342DDF;
@@ -331,14 +325,13 @@ strong {
   }
   #about .about-wrap .about-cont .cont-img {}
   /* ABOUT ME */
-  
+
   /* CONTACT */
   #contact .contact-wrap {
     display: block;
   }
   #contact .contact-wrap .contact-cont {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
   }
   #contact .contact-wrap .contact-cont .icon {
@@ -349,6 +342,12 @@ strong {
   #contact .contact-wrap .contact-cont p {
     font-size: 1.2rem;
     margin: 0 0 0 30px;
+  }
+  #contact .contact-wrap .contact-cont:nth-child(3) p {
+    display: none;
+  }
+  #contact .contact-wrap .contact-cont p.drive {
+    display: block;
   }
   /* CONTACT */
 }
