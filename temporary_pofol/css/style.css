@@ -76,6 +76,41 @@ strong {
 #header nav  .nav-btn.on span:nth-child(3) {
   transform: translateX(8px) rotate(-45deg);
 }
+#header nav .navi {
+  position: fixed;
+  width: 60%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: #FFF;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 8%;
+  transition: 1s;
+}
+#header nav .navi ul li {}
+#header nav .navi ul li a {
+  display: block;
+  width: 12rem;
+  font-size: 2rem;
+  margin: 2rem 0;
+  font-weight: bold;
+  padding: 10px;
+}
+#header nav .navi ul li a:hover {
+  color: #342DDF;
+}
+#header nav .navi ul li a span {
+  display: block;
+  width: 0%;
+  height: 0.4rem;
+  background: #342DDF;
+  margin-top: 10px;
+  transition: 0.6s;
+}
+#header nav .navi ul li a:hover span {
+  width: 100%;
+}
+
 /* HEADER */
 
 /* MAIN */
@@ -344,6 +379,11 @@ strong {
   html {
     font-size: 14px;
   }
+  /* MAIN */
+  #main {
+    height: 90vh;
+  }
+  /* MAIN */
 
   /* ABOUT ME */
   #about {
