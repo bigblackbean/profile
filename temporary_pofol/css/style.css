@@ -180,7 +180,9 @@ strong {
   height: 300px;
   background: #AAA;
 }
-#intro .swiper-container .intro-cont:nth-child(1) .cont-img {}
+#intro .swiper-container .intro-cont:nth-child(1) .cont-img {
+  background: center / cover no-repeat url(../images/intro-self.jpg);
+}
 #intro .swiper-container .intro-cont:nth-child(2) .cont-img {
   background: center right / cover no-repeat url(../images/intro-tmon.jpg);
 }
@@ -226,23 +228,53 @@ strong {
 }
 #about .about-wrap .about-cont {
   flex: 1 1 40%;
-  height: 300px;
+  /* height: 15rem; */
   background: #FFF;
-  padding: 20px;
+  /* padding: 20px; */
+  padding-top: 32%;
+  position: relative;
+  transition: 1s;
+}
+#about .about-wrap .about-cont:hover {
+  transform: rotateY(180deg);
 }
 #about .about-wrap .about-cont:nth-child(2){
   margin: 0 30px;
 }
-#about .about-wrap .about-cont h4 {
+#about .about-wrap .about-cont > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#about .about-wrap .about-cont:hover .cont-img {
+  visibility: visible;
+  transition-delay: 0.5s
+}
+#about .about-wrap .about-cont:hover .cont-img {
+  visibility: hidden;
+}
+#about .about-wrap .about-cont .cont-img h4 {
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  color: #342DDF;
 }
-#about .about-wrap .about-cont p {
+#about .about-wrap .about-cont .cont-txt {
+  visibility: hidden;
+  transition-delay: 0.5s;
+}
+#about .about-wrap .about-cont:hover .cont-txt {
+  visibility: visible;
+}
+#about .about-wrap .about-cont .cont-txt i {
+  font-size: 2rem;
+  color: #342DDF;
+}
+#about .about-wrap .about-cont .cont-txt p {
   line-height: 1.5;
 }
-#about .about-wrap .about-cont .cont-img {}
 /* ABOUT ME */
 
 /* PORTFOLIO */
@@ -251,9 +283,7 @@ strong {
   color: #342DDF;
 }
 #pofol .pofol-wrap {}
-#pofol .pofol-wrap .pofol-cont {
-  /* margin: 200px 0; */
-}
+#pofol .pofol-wrap .pofol-cont {}
 #pofol .pofol-wrap .pofol-cont.cd,
 #pofol .pofol-wrap .pofol-cont.sd {
   display: flex;
@@ -265,7 +295,9 @@ strong {
   height: 300px;
   background: #AAA;
 }
-#pofol .pofol-wrap .pofol-cont.cd .cont-img {}
+#pofol .pofol-wrap .pofol-cont.cd .cont-img {
+  background: center / cover no-repeat url(../images/tmon.jpg);
+}
 #pofol .pofol-wrap .pofol-cont.sd .cont-img {
   background: center / cover no-repeat url(../images/study.jpg);
 }
