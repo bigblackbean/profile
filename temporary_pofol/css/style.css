@@ -224,56 +224,56 @@ strong {
 }
 #about .about-wrap {
   display: flex;
-  justify-content: space-between;
 }
 #about .about-wrap .about-cont {
   flex: 1 1 40%;
-  /* height: 15rem; */
-  background: #FFF;
-  /* padding: 20px; */
-  padding-top: 32%;
+  height: 15rem;
   position: relative;
-  transition: 1s;
-}
-#about .about-wrap .about-cont:hover {
-  transform: rotateY(180deg);
 }
 #about .about-wrap .about-cont:nth-child(2){
   margin: 0 30px;
 }
 #about .about-wrap .about-cont > div {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  transition: all 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 10px
 }
-#about .about-wrap .about-cont:hover .cont-img {
-  visibility: visible;
-  transition-delay: 0.5s
+#about .about-wrap .about-cont .cont-front {
+  transform: rotateY(0deg);
+  z-index: 20;
 }
-#about .about-wrap .about-cont:hover .cont-img {
-  visibility: hidden;
+#about .about-wrap .about-cont .cont-back {
+  transform: rotateY(-180deg);
+  z-index: 10;
 }
-#about .about-wrap .about-cont .cont-img h4 {
+#about .about-wrap .about-cont:hover .cont-front {
+  transform: rotateY(180deg);
+  z-index: 10;
+}
+#about .about-wrap .about-cont:hover .cont-back {
+  transform: rotateY(0deg);
+  z-index: 20;
+}
+#about .about-wrap .about-cont .cont-front h4 {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  /* margin-bottom: 20px; */
   color: #342DDF;
 }
-#about .about-wrap .about-cont .cont-txt {
-  visibility: hidden;
-  transition-delay: 0.5s;
+#about .about-wrap .about-cont .cont-back i {
+  font-size: 1.5rem;
 }
-#about .about-wrap .about-cont:hover .cont-txt {
-  visibility: visible;
-}
-#about .about-wrap .about-cont .cont-txt i {
-  font-size: 2rem;
-  color: #342DDF;
-}
-#about .about-wrap .about-cont .cont-txt p {
-  line-height: 1.5;
+#about .about-wrap .about-cont .cont-back p {
+  line-height: 1.5rem;
+  font-size: .8rem;
 }
 /* ABOUT ME */
 
@@ -433,7 +433,9 @@ strong {
   #about .about-wrap .about-cont:nth-child(2){
     margin: 0;
   }
-  #about .about-wrap .about-cont .cont-img {}
+  #about .about-wrap .about-cont > div {
+    align-items: center;
+  }
   /* ABOUT ME */
 
   /* CONTACT */

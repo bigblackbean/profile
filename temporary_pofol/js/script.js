@@ -19,3 +19,14 @@ popClose.addEventListener('click', function(e){
   e.preventDefault();
   document.querySelector('.pop').style.opacity = 0;
 });
+
+// About Me Flip
+const aboutMeCont = document.querySelector('.about-cont');
+aboutMeCont.addEventListener('click', function(){
+  const hasClass = aboutMeCont.classList.contains('flip');
+  if (hasClass) {
+    aboutMeCont.classList.remove('flip');
+  }else {
+    aboutMeCont.classList.add('flip');
+  }
+});
