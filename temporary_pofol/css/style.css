@@ -440,7 +440,6 @@ strong {
 #cd .cd-wrap.local {
   background: #cdd9dc;
 }
-#cd .cd-wrap.local {}
 #cd .cd-wrap .cd-sec-title {
   font-family: 'Wemakeprice-Bold';
   font-size: .8rem;
@@ -458,6 +457,9 @@ strong {
   font-family: xeicon;
   font-size: 2rem;
   color: #181818;
+}
+#cd .cd-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background: #342DDF;
 }
 #cd .cd-slider .cd-cont {
   display: flex;
@@ -489,6 +491,36 @@ strong {
   font-size: .6rem;
   color: #FFF;
   background: #342DDF;
+}
+#gallery-pop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+}
+#gallery-pop .gallery-close {
+  display: block;
+  padding: 0 30px 10px 10px;
+  border-radius: 5px 0px 0px 5px;
+  color: #FFF;
+  font-size: 2rem;
+  line-height: 2rem;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  z-index: 999;
+  background: rgba(0, 0, 0, .5);
+}
+#gallery-pop .pop-cont {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+#gallery-pop .pop-cont img {
+  width: 100%;
 }
 /* CONTENTS DESIGN PAGE */
 
@@ -558,4 +590,18 @@ strong {
     display: block;
   }
   /* CONTACT */
+
+  /* CONTENTS DESIGN PAGE */
+  #cd .cd-slider .cd-cont {
+    display: block;
+  }
+  #cd .cd-slider .cd-cont .cont-img {
+    width: 100%;
+  }
+  #cd .cd-slider .cd-cont .cont-txt {
+    width: 100%;
+    padding: 5rem 0;
+    text-align: center;
+  }
+  /* CONTENTS DESIGN PAGE */
 }

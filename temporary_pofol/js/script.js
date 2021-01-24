@@ -21,6 +21,7 @@ navBtn.addEventListener('click', function naviToggle(){
 // });
 
 // About Me Flip
+/*
 const aboutMeContIdx = document.getElementsByClassName('about-cont');
 const aboutMeCont = document.querySelector('.about-cont');
 const aboutMeContLength = aboutMeContIdx.length;
@@ -34,4 +35,26 @@ aboutMeCont.addEventListener('click', function(){
       aboutMeCont.classList.add('flip');
     }
   }
+});
+*/
+
+const galleryPop = document.querySelector('#gallery-pop');
+const galleryOpen = document.querySelectorAll('.gallery-open');
+const galleryClose = document.querySelector('.gallery-close');
+const galleryCont = document.querySelectorAll('.cd-cont');
+const galleryPopCont = document.querySelector('.pop-cont');
+
+for(var i = 0; i < galleryCont.length; i++) {
+  galleryOpen[i].addEventListener('click', galleryPopImg);
+}
+
+function galleryPopImg() {
+  galleryPop.style.display = 'block';
+  let num = this.getAttribute('name');
+  console.log(this);
+  console.log(num);
+  galleryPopCont.innerHTML = `<img src='images/promotion/promotion_full_${num}.jpg' alt='프로모션이미지${num}'>`;
+}
+galleryClose.addEventListener('click', function() {
+  galleryPop.style.display = 'none';
 });
