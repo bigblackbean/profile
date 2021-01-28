@@ -164,8 +164,14 @@ strong {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-100%, -50%);
   color: #FFF;
+  opacity: 0;
+  animation: main-txt 1s forwards;
+}
+@keyframes main-txt {
+  0% {transform: translate(-100%, -50%); opacity: 0;}
+  100% {transform: translate(0, -50%); opacity: 1;}
 }
 #main .main-txt p {
   margin: 20px 0;
